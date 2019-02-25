@@ -33,9 +33,9 @@ print_matrix(matrix2)
 
 clear_screen(screen)
 matrix = new_matrix(0)
-x, y, z = 200, 200, 1
+x, y, z = 100, 100, 1
 for i in range(200):
-	add_edge(matrix, x, y, z, int( i * math.sin(i/math.pi)) + 200, int( i * math.cos(i)) + 200 , 1)
+	add_edge(matrix, x, y, z, int( i * math.sin(i/math.pi)) + 100, int( i * math.cos(i)) + 100 , 1)
 	x = int( i*math.pi ) + random.randrange(50)
 	y = int( i*math.pi ) + random.randrange(50)
 	z = 1
