@@ -34,9 +34,9 @@ clear_screen(screen)
 matrix = new_matrix(0)
 x, y, z = 250, 250, 1
 for i in range(250):
-	add_edge(matrix, x, y, z, int(i + 10 / math.pi), int(i + 10 / math.pi) , 1)
-	x = int(i*math.pi + 200)
-	y = int(i*math.pi + 200)
+	add_edge(matrix, x, y, z, int( math.sin(i/math.pi)), int( math.cos(i/math.pi)) , 1)
+	x = int( math.cos(i*math.pi) )
+	y = int( math.cos(i*math.pi + 200))
 	z = 1
 add_edge(matrix, x, y, z, 250, 250, 1)
 draw_lines(matrix,screen,color)
