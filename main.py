@@ -35,7 +35,7 @@ clear_screen(screen)
 matrix = new_matrix(0)
 x, y, z = 250, 250, 1
 for i in range(250):
-	add_edge(matrix, x, y, z, int( i * math.tan(i*math.pi)) + 200, int( i * math.sin(i*math.pi)) + 200 , 1)
+	add_edge(matrix, x, y, z, int( i * math.sin(i*math.pi)) + 200, int( i * math.tan(i*math.pi)) + 200 , 1)
 	x = int( i*math.pi ) + random.randrange(50)
 	y = int( i%math.pi ) + random.randrange(50)
 	z = 1
