@@ -2,6 +2,7 @@ from display import *
 from draw import *
 from matrix import *
 import math
+import random
 
 screen = new_screen()
 color = [ 0, 255, 0 ]
@@ -35,8 +36,8 @@ matrix = new_matrix(0)
 x, y, z = 250, 250, 1
 for i in range(250):
 	add_edge(matrix, x, y, z, int( math.sin(i/math.pi)), int( math.cos(i/math.pi)) , 1)
-	x = int( math.cos(i*math.pi) )
-	y = int( math.cos(i*math.pi + 200))
+	x = int( i*math.pi + random.randrange(100) )
+	y = int( i*math.pi + random.randrange(100) )
 	z = 1
 add_edge(matrix, x, y, z, 250, 250, 1)
 draw_lines(matrix,screen,color)
