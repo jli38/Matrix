@@ -33,13 +33,13 @@ print_matrix(matrix2)
 
 clear_screen(screen)
 matrix = new_matrix(0)
-x, y, z = 50, 50, 1
-for i in range(50):
-	add_edge(matrix, x, y, z, int( i * math.sin(i/math.pi)) + 50, int( i * math.cos(i)) + 50 , 1)
+x, y, z = 100, 100, 1
+for i in range(100):
+	add_edge(matrix, x, y, z, int( i * math.sin(i/math.pi)) + 100, int( i * math.cos(i)) + 100 , 1)
 	x = int( i*math.pi ) + random.randrange(50)
 	y = int( i*math.pi ) + random.randrange(50)
 	z = 1
-add_edge(matrix, x, y, z, 50, 50, 1)
+add_edge(matrix, x, y, z, 100, 100, 1)
 draw_lines(matrix,screen,color)
 
 save_extension(screen,"img.png")
