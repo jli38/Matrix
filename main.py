@@ -34,11 +34,11 @@ clear_screen(screen)
 matrix = new_matrix(0)
 x, y, z = 250, 250, 1
 for i in range(250):
-	add_edge(matrix, x, y, z, int(i*math.pi)%256, int(i*math.pi)%256 , 1)
-	saveX = int(i*math.pi)%256 + 200
-	saveY = int(i*math.pi)%256 + 250
-	saveZ = 1
-add_edge(matrix,saveX,saveY,saveZ,250,250,1)
+	add_edge(matrix, x, y, z, int(i + 10 / math.pi), int(i + 10 / math.pi) , 1)
+	x = int(i*math.pi + 200)
+	y = int(i*math.pi + 200)
+	z = 1
+add_edge(matrix, x, y, z, 250, 250, 1)
 draw_lines(matrix,screen,color)
 
 save_extension(screen,"img.png")
